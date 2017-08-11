@@ -1,8 +1,17 @@
 import React, {PropTypes} from 'react';
 
 import AnswersList from './AnswersList';
+import DetailInfoQuestion from './DetailInfoQuestion';
 import ProgressBarShow from './ProgressBarShow';
-import {ListGroup, Media, Panel, PanelGroup, Row} from 'react-bootstrap';
+import {
+    Button,
+    ButtonToolbar,
+    ListGroup,
+    Media,
+    Panel,
+    PanelGroup,
+    Row
+} from 'react-bootstrap';
 
 const QuestionsList = React.createClass({
     getInitialState() {
@@ -21,6 +30,7 @@ const QuestionsList = React.createClass({
 
         if (questions && questions.length > 0) {
             template = questions.map((item, index) => {
+                const {config = {}, info = {}} = item;
                 const questions = item.questions.map((item) => {
                     const {name, answers} = item;
 
@@ -44,9 +54,24 @@ const QuestionsList = React.createClass({
                     )
                 })
 
+                let style = 'info';
+                console.log(questions);
+                if (config.isAccess == true) {
+                    style = 'success';
+                }
+                if (config.isRequired == true) {
+                    style = 'danger';
+                }
+
                 return (
                     <PanelGroup activeKey={this.state.activeKey} onSelect={this.handleSelect} accordion>
-                        <Panel header={item.name} eventKey={index}>
+                        <Panel header={item.name} eventKey={index} bsStyle={style}>
+                            <ButtonToolbar>
+                                <Button bsStyle='primary'>Начать</Button>
+                                <Button bsStyle='primary'>Тренировка</Button>
+                                <DetailInfoQuestion info={info} required={config.isRequired}/>
+                            </ButtonToolbar>
+                            <br/>
                             {
                                 item.result && <ProgressBarShow pos={item.result}/>
                             }
