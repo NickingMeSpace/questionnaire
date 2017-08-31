@@ -6,7 +6,7 @@ import {Link} from 'react-router';
 export default class Menu extends Component {
     render() {
         const getLink = (link, text) => {
-            return(
+            return (
                 <Navbar.Text>
                     <Navbar.Link href={link}>{text}</Navbar.Link>
                 </Navbar.Text>

@@ -3,15 +3,7 @@ import React, {PropTypes} from 'react';
 import AnswersList from './AnswersList';
 import DetailInfoQuestion from './DetailInfoQuestion';
 import ProgressBarShow from './ProgressBarShow';
-import {
-    Button,
-    ButtonToolbar,
-    ListGroup,
-    Media,
-    Panel,
-    PanelGroup,
-    Row
-} from 'react-bootstrap';
+import {Button, ButtonToolbar, ListGroup, Media, Panel, PanelGroup, Row} from 'react-bootstrap';
 
 const QuestionsList = React.createClass({
     getInitialState() {

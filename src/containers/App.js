@@ -9,9 +9,7 @@ import Menu from '../components/Menu';
 
 class App extends Component {
     render() {
-        const {user} = this.props
-        // const {user, page} = this.props
-        // const {getPhotos} = this.props.pageActions
+        const {user} = this.props;
 
         return (
             <Grid>

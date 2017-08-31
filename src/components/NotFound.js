@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router'
+import React, {Component} from 'react'
+import {Link} from 'react-router'
 
 export default class NotFound extends Component {
     render() {
         return (
-            <div className='container' >
-                <div className='row' >
-                    <div className='col-md-12' >
+            <div className='container'>
+                <div className='row'>
+                    <div className='col-md-12'>
                         Страница не найдена. Вернутся на <Link to='/'>главную</Link>?
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import {Navbar, FormGroup, FormControl, Button} from 'react-bootstrap';
+import {Button, FormControl, FormGroup, Navbar} from 'react-bootstrap';
 
 export default class Footer extends Component {
     render() {
@@ -10,12 +10,12 @@ export default class Footer extends Component {
                     <Navbar.Brand>
                         <a href='#'>questionnaire</a>
                     </Navbar.Brand>
-                    <Navbar.Toggle />
+                    <Navbar.Toggle/>
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Navbar.Form pullLeft>
                         <FormGroup>
-                            <FormControl type='text' placeholder='Поиск' />
+                            <FormControl type='text' placeholder='Поиск'/>
                         </FormGroup>
                         {' '}
                         <Button type='submit'>Искать</Button>

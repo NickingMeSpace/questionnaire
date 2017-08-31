@@ -10,7 +10,7 @@ import Admin from './components/_Admin'
 import Genre from './components/_Genre'
 import Desctop from './components/Desctop'
 import NotFound from './components/NotFound'
-import { Router, Route, IndexRoute, browserHistory } from 'react-router'
+import {browserHistory, IndexRoute, Route, Router} from 'react-router'
 
 const store = configureStore()
 
