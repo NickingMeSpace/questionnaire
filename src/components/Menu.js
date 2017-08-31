@@ -1,32 +1,41 @@
 import React, {Component} from 'react';
 
-import {MenuItem, Nav, Navbar, NavDropdown, NavItem} from 'react-bootstrap';
+import {MenuItem, Nav, Navbar, NavDropdown} from 'react-bootstrap';
+import {Link} from 'react-router';
 
 export default class Menu extends Component {
     render() {
+        const getLink = (link, text) => {
+            return(
+                <Navbar.Text>
+                    <Navbar.Link href={link}>{text}</Navbar.Link>
+                </Navbar.Text>
+            )
+        }
+
         return (
             <Navbar inverse collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <a href='#'>React-Bootstrap</a>
+                        <Link to='/'>Рабочий стол</Link>
                     </Navbar.Brand>
                     <Navbar.Toggle/>
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
-                        <NavItem eventKey={1} href='#'>Link</NavItem>
-                        <NavItem eventKey={2} href='#'>Link</NavItem>
-                        <NavDropdown eventKey={3} title='Dropdown' id='basic-nav-dropdown'>
-                            <MenuItem eventKey={3.1}>Action</MenuItem>
-                            <MenuItem eventKey={3.2}>Another action</MenuItem>
-                            <MenuItem eventKey={3.3}>Something else here</MenuItem>
+                        {getLink('/tests', 'Мои тесты')}
+                        {getLink('/history', 'История')}
+                        <NavDropdown eventKey={1} title='Создать' id='basic-nav-dropdown'>
+                            <MenuItem eventKey={1.1}>Комментарий</MenuItem>
+                            <MenuItem eventKey={1.2}>Тест</MenuItem>
+                            <MenuItem eventKey={1.3}>Пользователя</MenuItem>
                             <MenuItem divider/>
-                            <MenuItem eventKey={3.3}>Separated link</MenuItem>
+                            <MenuItem eventKey={1.3}>...</MenuItem>
                         </NavDropdown>
                     </Nav>
-                    <Nav pullRight>
-                        <NavItem eventKey={1} href='#'>Link Right</NavItem>
-                        <NavItem eventKey={2} href='#'>Link Right</NavItem>
+                    <Nav pullRight className='navbar-nav'>
+                        {getLink('/adds', 'Оповещения')}
+                        {getLink('/profile', 'Мой профиль')}
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
