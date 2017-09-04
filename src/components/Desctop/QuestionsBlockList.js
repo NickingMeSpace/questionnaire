@@ -1,16 +1,17 @@
 import React, {PropTypes} from 'react'
 
 import QuestionsList from './QuestionsList';
+import { ListGroup } from 'react-bootstrap'
 
 const QuestionsBlockList = React.createClass({
     render() {
         const {questionList} = this.props;
 
         return (
-            <div>
+            <ListGroup className='panelGroupList' fill>
                 {/*todo filter*/}
                 <QuestionsList questions={questionList}/>
-            </div>
+            </ListGroup>
         );
     }
 });

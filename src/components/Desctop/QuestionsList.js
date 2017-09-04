@@ -2,8 +2,8 @@ import React, {PropTypes} from 'react';
 
 import AnswersList from './AnswersList';
 import DetailInfoQuestion from './DetailInfoQuestion';
-import ProgressBarShow from './ProgressBarShow';
-import {Button, ButtonToolbar, ListGroup, Media, Panel, PanelGroup, Row} from 'react-bootstrap';
+import ProgressBarShow from '../ProgressBarShow';
+import {Button, ButtonToolbar, ListGroup, Media, Panel, Row, ListGroupItem} from 'react-bootstrap';
 
 const QuestionsList = React.createClass({
     getInitialState() {
@@ -31,7 +31,7 @@ const QuestionsList = React.createClass({
                             <Media.List>
                                 <Media.ListItem>
                                     <Media.Left>
-                                        <img width={64} height={64} src={require('../assets/thumbnail.png')}
+                                        <img width={64} height={64} src={require('../../assets/thumbnail.png')}
                                              alt='Image'/>
                                     </Media.Left>
                                     <Media.Body>
@@ -56,8 +56,8 @@ const QuestionsList = React.createClass({
                 }
 
                 return (
-                    <PanelGroup activeKey={this.state.activeKey} onSelect={this.handleSelect} accordion>
-                        <Panel header={item.name} eventKey={index} bsStyle={style}>
+                    <ListGroupItem>
+                        <Panel collapsible header={item.name} eventKey={index} bsStyle={style} className='panelList'>
                             <ButtonToolbar>
                                 <Button bsStyle='primary'>Начать</Button>
                                 <Button bsStyle='primary'>Тренировка</Button>
@@ -70,7 +70,7 @@ const QuestionsList = React.createClass({
 
                             {questions}
                         </Panel>
-                    </PanelGroup>
+                    </ListGroupItem>
                 )
             });
         } else {

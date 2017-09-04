@@ -2,11 +2,11 @@ import React, {Component} from 'react';
 
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
-import * as pageActions from '../actions/PageActions'
-import Template from '../components/Template'
-import QuestionList from '../assets/mock/QuestionList';
+import * as pageActions from '../../actions/PageActions'
+import Template from './Template'
+import QuestionList from '../../assets/mock/QuestionList';
 
-class Desctop extends Component {
+class Desktop extends Component {
     render() {
         const {user, page} = this.props
         const {getPhotos} = this.props.pageActions
@@ -30,4 +30,4 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Desctop)
+export default connect(mapStateToProps, mapDispatchToProps)(Desktop)

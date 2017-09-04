@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 
-export default class Admin extends Component {
+export default class AddsEdit extends Component {
     render() {
         return (
             <div className='row'>
-                <div className='col-md-12'>Раздел /admin</div>
+                <div className='col-md-12'>Раздел /adds/edit</div>
             </div>
         )
     }

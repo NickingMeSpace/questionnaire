@@ -25,10 +25,10 @@ export default class Menu extends Component {
                     <Nav>
                         {getLink('/tests', 'Мои тесты')}
                         {getLink('/history', 'История')}
-                        <NavDropdown eventKey={1} title='Создать' id='basic-nav-dropdown'>
-                            <MenuItem eventKey={1.1}>Комментарий</MenuItem>
-                            <MenuItem eventKey={1.2}>Тест</MenuItem>
-                            <MenuItem eventKey={1.3}>Пользователя</MenuItem>
+                        <NavDropdown title='Создать' id='basic-nav-dropdown'>
+                            <MenuItem href='/comment/add'>Комментарий</MenuItem>
+                            <MenuItem href='/test/add'>Тест</MenuItem>
+                            <MenuItem href='/user/add'>Пользователя</MenuItem>
                             <MenuItem divider/>
                             <MenuItem eventKey={1.3}>...</MenuItem>
                         </NavDropdown>
