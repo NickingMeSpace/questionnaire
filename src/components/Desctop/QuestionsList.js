@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 
 import AnswersList from './AnswersList';
 import DetailInfoQuestion from './DetailInfoQuestion';
-import ProgressBarShow from '../ProgressBarShow';
+import ProgressBarShow from '../Common/ProgressBarShow';
 import {Button, ButtonToolbar, ListGroup, Media, Panel, Row, ListGroupItem} from 'react-bootstrap';
 
 const QuestionsList = React.createClass({

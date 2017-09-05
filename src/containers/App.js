@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Header from '../components/Common/Header'
+import Footer from '../components/Common/Footer'
 import * as pageActions from '../actions/PageActions'
 import {Col, Grid, Row} from 'react-bootstrap';
-import Menu from '../components/Menu';
+import Menu from '../components/Common/Menu';
 
 class App extends Component {
     render() {

@@ -1,10 +1,11 @@
 import React, {Component, PropTypes} from 'react';
 
-import Page from '../Page';
+import Page from '../Common/Page';
 import QuestionsBlockList from './QuestionsBlockList';
 import AddsList from './AddsList';
-import {PageHeader, Panel, ListGroup, ListGroupItem} from 'react-bootstrap';
+import {Panel, ListGroup, ListGroupItem} from 'react-bootstrap';
 import {Link} from 'react-router';
+import HeaderPageInfo from '../Common/HeaderPageInfo';
 
 export default class Template extends Component {
     render() {
@@ -25,10 +26,7 @@ export default class Template extends Component {
 
         return (
             <div className='desktop'>
-                <PageHeader className='big-250'>
-                    Рабочий стол
-                    <small>студент</small>
-                </PageHeader>
+                <HeaderPageInfo/>
 
                 <Panel header={title}>
                     <QuestionsBlockList questionList={questionList}/>
